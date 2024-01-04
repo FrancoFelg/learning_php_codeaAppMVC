@@ -58,6 +58,17 @@ class modeloController{
         header("location:".urlsite);
     }
 
+   
+    static function eliminar(){
+        $id = $_REQUEST["id"];//Obtenemos el ID de la request
+        $producto = new Modelo();
+        $datos = $producto->eliminar("productos", "id=".$id);//Obtenemos el producto con el ID obtenido
+        header("location:".urlsite);
+
+    }
+
+
+
 
 }
 

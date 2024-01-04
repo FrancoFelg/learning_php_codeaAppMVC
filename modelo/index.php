@@ -41,6 +41,17 @@ class Modelo {
         }
     }
 
+    public function eliminar($tabla, $condicion){
+        $consulta="delete from " . $tabla  ." where ". $condicion;
+        $resultado=$this->db->query($consulta);
+        
+        if($resultado){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 
 
 }
