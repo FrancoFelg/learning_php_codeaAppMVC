@@ -20,10 +20,10 @@
                     <td><?php echo $v['id'] ?></td>
                     <td><?php echo $v['nombre'] ?></td>
                     <td>
-                        <a class="btn" href="/index.php?m=editar$id=<?php echo $v['id']?>">
+                        <a class="btn" href="index.php?m=editar&id=<?php echo $v['id']?>">
                             Editar
                         </a>
-                        <a class="btn" href="/index.php?m=eliminar$id=<?php echo $v['id']?>">
+                        <a class="btn" href="index.php?m=eliminar&id=<?php echo $v['id']?>">
                             Eliminar
                         </a>
                     </td>

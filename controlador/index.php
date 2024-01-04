@@ -33,6 +33,31 @@ class modeloController{
         header("location:".urlsite);
     }
 
+    //editar
+    static function editar(){
+        $id = $_REQUEST["id"];//Obtenemos el ID de la request
+        $producto = new Modelo();
+        $datos = $producto->mostrar("productos", "id=".$id);//Obtenemos el producto con el ID obtenido
+        require_once("vistas/editar.php");
+
+    }
+
+    //actualizar
+    static function actualizar(){
+        //Obtengo los parámetros
+        $id = $_REQUEST["id"];//Obtenemos el ID de la request
+        $nombre= $_REQUEST["nombre"];
+        $precio= $_REQUEST["precio"];
+
+        //Creo una variable con los datos
+        $data = "nombre='".$nombre."',precio=".$precio;
+        $producto = new Modelo();
+        //Inserto los datos
+        //Actualizar recibe la tabla, los datos y la condicion.
+        $datos = $producto->actualizar("productos", $data, "id=".$id);
+        header("location:".urlsite);
+    }
+
 
 }
 
