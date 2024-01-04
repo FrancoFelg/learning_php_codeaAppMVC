@@ -1,0 +1,14 @@
+.panel{
+    max-width: 800px;
+    margin: aunto;
+    background-color: gainsboro;
+}
+
+.text-center{
+    text-align: center;
+    
+}
+
+table td tr{
+    border: 1px solid black
+}
